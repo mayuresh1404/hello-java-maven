@@ -4,7 +4,7 @@ This repository contains a simple Java application that demonstrates how to run 
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 hello-java-maven/
@@ -30,7 +30,7 @@ hello-java-maven/
 
 ---
 
-## 📦 How to Run the Project
+##  How to Run the Project
 
 ### 1. Clone the Repo
 ```bash
@@ -59,55 +59,5 @@ docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins:lts
 ### 5. Build the Job
 - Click **Build Now**
 - Go to **Console Output**
-- You should see: ✅ `BUILD SUCCESS`
+- You should see:  `BUILD SUCCESS`
 
----
-
-## 📸 Screenshot
-
-![Build Success Screenshot](screenshots/build-success.png)
-
----
-
-## 🎯 What I Learned
-
-- How to create a Freestyle Jenkins job
-- How Jenkins integrates with Maven to build Java code
-- How to configure build tools in Jenkins
-- How to troubleshoot and read Jenkins console output
-
----
-
-## 🧠 Interview Questions Prepared
-
-1. **What is Jenkins?**  
-   Jenkins is an open-source CI/CD automation server.
-
-2. **How do you create a Jenkins job?**  
-   Via the Dashboard → New Item → Freestyle project.
-
-3. **What is Maven used for?**  
-   Building, managing dependencies, and packaging Java projects.
-
-4. **How does Jenkins use Maven?**  
-   Jenkins runs Maven commands (`clean`, `compile`, `package`) during builds.
-
-5. **Difference between compile and package in Maven?**  
-   `compile` compiles the code; `package` compiles and creates a JAR/WAR file.
-
-6. **Where do you configure tools in Jenkins?**  
-   Manage Jenkins → Global Tool Configuration.
-
-7. **How do you debug a failed Jenkins build?**  
-   Review the console output logs and error trace.
-
----
-
-## 📤 Submission
-
-✅ GitHub Repository Link: [Paste your GitHub repo link here]  
-✅ Submitted via the [Task 8 Submission Form](https://forms.gle/Kbth3HrqojwX84K5A)
-
----
-
-> 💡 _“CI/CD begins with simple automation — like this task!”_
