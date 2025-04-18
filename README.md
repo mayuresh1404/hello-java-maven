@@ -1,0 +1,113 @@
+# 🚀 Task 8 - Java Maven Build Job using Jenkins
+
+This repository contains a simple Java application that demonstrates how to run a Maven build job using Jenkins. It is part of a DevOps internship assignment to understand the basics of CI/CD and Jenkins job creation.
+
+---
+
+## 📁 Project Structure
+
+```
+hello-java-maven/
+├── pom.xml
+└── src/
+    └── main/
+        └── java/
+            └── HelloWorld.java
+```
+
+- `HelloWorld.java`: A simple Java program that prints "Hello, Jenkins + Maven!" to the console.
+- `pom.xml`: Maven build configuration file.
+
+---
+
+## ⚙️ Tools & Technologies Used
+
+- **Jenkins** (via Docker)
+- **Maven** (v3.8.6)
+- **Java** (JDK 8 or 11)
+- **Docker** (for containerized Jenkins)
+- **GitHub** (for version control & submission)
+
+---
+
+## 📦 How to Run the Project
+
+### 1. Clone the Repo
+```bash
+git clone https://github.com/your-username/hello-java-maven.git
+cd hello-java-maven
+```
+
+### 2. Start Jenkins (if using Docker)
+```bash
+docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins:lts
+```
+
+### 3. Configure Maven in Jenkins
+- Go to: `Manage Jenkins > Global Tool Configuration`
+- Under **Maven**, add a new Maven installation (e.g., `Maven-3.8.6`)
+- Check ✔️ "Install Automatically"
+
+### 4. Create a Freestyle Job in Jenkins
+- Go to Jenkins Dashboard > **New Item**
+- Select **Freestyle Project** and name it `Hello-Java-Build`
+- In the **Build** section:
+  - Add a build step: **Invoke top-level Maven targets**
+  - Set **Goals**: `clean package`
+  - Select Maven version: `Maven-3.8.6`
+
+### 5. Build the Job
+- Click **Build Now**
+- Go to **Console Output**
+- You should see: ✅ `BUILD SUCCESS`
+
+---
+
+## 📸 Screenshot
+
+![Build Success Screenshot](screenshots/build-success.png)
+
+---
+
+## 🎯 What I Learned
+
+- How to create a Freestyle Jenkins job
+- How Jenkins integrates with Maven to build Java code
+- How to configure build tools in Jenkins
+- How to troubleshoot and read Jenkins console output
+
+---
+
+## 🧠 Interview Questions Prepared
+
+1. **What is Jenkins?**  
+   Jenkins is an open-source CI/CD automation server.
+
+2. **How do you create a Jenkins job?**  
+   Via the Dashboard → New Item → Freestyle project.
+
+3. **What is Maven used for?**  
+   Building, managing dependencies, and packaging Java projects.
+
+4. **How does Jenkins use Maven?**  
+   Jenkins runs Maven commands (`clean`, `compile`, `package`) during builds.
+
+5. **Difference between compile and package in Maven?**  
+   `compile` compiles the code; `package` compiles and creates a JAR/WAR file.
+
+6. **Where do you configure tools in Jenkins?**  
+   Manage Jenkins → Global Tool Configuration.
+
+7. **How do you debug a failed Jenkins build?**  
+   Review the console output logs and error trace.
+
+---
+
+## 📤 Submission
+
+✅ GitHub Repository Link: [Paste your GitHub repo link here]  
+✅ Submitted via the [Task 8 Submission Form](https://forms.gle/Kbth3HrqojwX84K5A)
+
+---
+
+> 💡 _“CI/CD begins with simple automation — like this task!”_
